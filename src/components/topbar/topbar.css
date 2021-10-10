@@ -1,0 +1,95 @@
+a {
+  text-decoration: none;
+}
+
+.top {
+  width: 100%;
+  height: 70px;
+  background-color: hsl(0, 0%, 7%);
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  font-family: 'Lato', sans-serif;
+  z-index: 1;
+  color: hsl(0, 0%, 95%);
+}
+
+.topleft,
+.topright {
+  flex: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.topleft {
+  font-family: 'Comfortaa', cursive;
+  margin-left: -150px;
+  font-size: large;
+}
+
+.topimg {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+.toplist {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  margin-left: -8px;
+  padding: 0;
+  list-style: none;
+}
+
+.toplist-item {
+  margin-right: 20px;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.topimg {
+  margin-right: 15px;
+}
+
+.span {
+  margin: 5px 10px 0 10px;
+  font-size: 16px;
+}
+
+.login-btn,
+.register-btn {
+  font-family: 'Noto Sans Display', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 4px 12px;
+}
+
+.login-btn {
+  border: 2px solid hsl(0, 0%, 90%);
+  border-radius: 8px;
+}
+
+.login-btn:hover {
+  background-color: hsl(0, 0%, 90%);
+  color: black;
+}
+
+.register-btn {
+  color: black;
+  background-color: hsl(0, 0%, 90%);
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.register-btn:hover {
+  background-color: black;
+  color: hsl(0, 0%, 90%);
+  border-color: hsl(0, 0%, 90%);
+}

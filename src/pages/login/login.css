@@ -1,0 +1,58 @@
+.login {
+  height: calc(100vh - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url('https://images.unsplash.com/photo-1545427811-c31768595db2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1170&q=80')
+    no-repeat center center/cover;
+  height: 90.3vh;
+  overflow: hidden;
+  font-family: 'Comfortaa', cursive;
+}
+
+.login-title {
+  font-size: 50px;
+  color: hsl(0, 0%, 85%);
+  font-size: 60px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > label {
+  margin: 15px 0;
+  color: hsl(0, 0%, 85%);
+}
+
+.login-form > input {
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.login-form > input:focus {
+  border: none;
+}
+
+.login-submit {
+  margin-top: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.login-submit:hover {
+  background-color: hsl(0, 0%, 95%);
+  color: black;
+}
+
+.login-submit:disabled {
+  cursor: not-allowed;
+  background-color: hsl(0, 0%, 95%);
+}

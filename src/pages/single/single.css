@@ -1,0 +1,6 @@
+.single {
+  display: flex;
+  background-color: hsl(0, 0%, 10%);
+  width: 100%;
+  height: 100vh;
+}

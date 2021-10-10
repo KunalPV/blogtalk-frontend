@@ -1,0 +1,101 @@
+.single-post {
+  flex: 9;
+}
+
+.single-post-wrapper {
+  padding: 20px;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-post-img {
+  width: 100%;
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.single-post-title {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 28px;
+  color: hsl(0, 0%, 80%);
+}
+
+.single-post-title-input {
+  text-align: center;
+  margin: 10px;
+  font-family: 'Lora', sans-serif;
+  font-size: 28px;
+  color: gray;
+  border: none;
+  border-bottom: 1px solid lightgray;
+}
+
+.single-post-title-input:focus {
+  outline: none;
+}
+
+.single-post-edit {
+  float: right;
+  font-size: 25px;
+}
+
+.single-posticon {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.single-posticon:first-child {
+  color: hsl(0, 0%, 80%);
+}
+.single-posticon:last-child {
+  color: hsl(0, 0%, 80%);
+}
+
+.single-post-info {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  color: #b39656;
+}
+
+.single-postdes {
+  color: hsl(0, 0%, 80%);
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'Noto Sans Display', sans-serif;
+}
+
+.single-postdes::first-letter {
+  margin-left: 20px;
+  font-size: 30px;
+  font-weight: 600px;
+}
+
+.single-postdes-input {
+  border: none;
+  color: #666;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.single-postdes-input:focus {
+  outline: none;
+}
+
+.single-post-btn {
+  width: 100px;
+  border: none;
+  background-color: teal;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-top: 20px;
+}
