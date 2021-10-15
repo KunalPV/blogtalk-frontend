@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
 import './write.css';
 
@@ -23,11 +23,14 @@ export default function Write() {
       data.append('file', file);
       newPost.photo = filename;
       try {
-        await axios.post('/upload', data);
+        await axios.post(process.env.REACT_APP_ASSET_URL + '/upload', data);
       } catch (err) {}
     }
     try {
-      const res = await axios.post('/posts', newPost);
+      const res = await axios.post(
+        process.env.REACT_APP_ASSET_URL + '/posts',
+        newPost
+      );
       window.location.replace('/post/' + res.data._id);
     } catch (err) {}
   };

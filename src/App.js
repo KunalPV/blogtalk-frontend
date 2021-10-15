@@ -8,7 +8,7 @@ import Register from './pages/register/Register';
 import About from './pages/about/About';
 import Contact from './pages/contact/Contact';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Context } from './context/Context';
 
 function App() {

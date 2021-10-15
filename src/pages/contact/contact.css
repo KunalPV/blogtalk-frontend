@@ -20,7 +20,7 @@ a {
   margin-top: 50px;
 }
 
-.contact > h1 {
+.form-wrap > h1 {
   font-size: 40px;
   font-weight: 700;
 }
@@ -37,12 +37,12 @@ a {
 
 .form-wrap,
 .form-group label {
-  display: block;
   margin-bottom: 10px;
 }
 
 .form-group input {
   width: 100%;
+  margin-top: 5px;
   padding: 10px;
   border-radius: 5px;
 }
@@ -69,4 +69,25 @@ a {
 .btn:hover {
   background-color: hsl(0, 0%, 95%);
   color: black;
+}
+
+.success-msg {
+  padding: 10rem 1rem 12rem 1rem;
+  text-align: center;
+}
+
+.success-msg > h1 {
+  width: 115%;
+  margin: auto;
+  margin: 5px 0px 15px 0px;
+}
+
+.success-msg p {
+  margin: 5px;
+  line-height: 1.4rem;
+}
+
+.success-msg span {
+  font-size: 20px;
+  font-weight: 900;
 }

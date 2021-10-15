@@ -1,10 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './post.css';
 
 export default function Post({ post }) {
-  const PF = process.env.REACT_APP_BACKEND_URL + 'images/';
-
-  console.log(post.photo);
+  const PF = process.env.REACT_APP_BACKEND_URL + '/images/';
   return (
     <>
       <div className="post">

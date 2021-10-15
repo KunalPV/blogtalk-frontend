@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import Header from '../../components/header/Header';
@@ -13,8 +13,9 @@ export default function Home() {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const res = await axios.get('/posts' + search);
-      console.log(res.data);
+      const res = await axios.get(
+        process.env.REACT_APP_ASSET_URL + '/posts' + search
+      );
       setPosts(res.data);
     };
     fetchPosts();
@@ -25,7 +26,7 @@ export default function Home() {
       <Header />
       <div className="home">
         <Posts posts={posts} />
-        <Sidebar />
+        <Sidebar className="sidebar" />
       </div>
     </>
   );

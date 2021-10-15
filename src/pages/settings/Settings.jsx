@@ -1,4 +1,4 @@
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Context } from '../../context/Context';
 import Sidebar from '../../components/sidebar/Sidebar';
 import axios from 'axios';
@@ -31,11 +31,14 @@ export default function Settings() {
       data.append('file', file);
       updatedUser.profilePic = filename;
       try {
-        await axios.post('/upload', data);
+        await axios.post(process.env.REACT_APP_ASSET_URL + '/upload', data);
       } catch (err) {}
     }
     try {
-      const res = await axios.put('/users/' + user._id, updatedUser);
+      const res = await axios.put(
+        process.env.REACT_APP_ASSET_URL + '/users/' + user._id,
+        updatedUser
+      );
       setSuccess(true);
       dispatch({ type: 'UPDATE_SUCCESS', payload: res.data });
     } catch (err) {
@@ -50,6 +53,7 @@ export default function Settings() {
           <span className="settings-update-title">Update Your Account</span>
           <span className="settings-delete-title">Delete Account</span>
         </div>
+        <p>Please make sure fill all the details.</p>
         <form className="settings-form" onSubmit={handleSubmit}>
           <label>Profile Picture</label>
           <div className="settings-profile">

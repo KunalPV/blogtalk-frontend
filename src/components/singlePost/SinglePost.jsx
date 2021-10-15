@@ -1,4 +1,4 @@
-import { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import { useLocation } from 'react-router';
 import axios from 'axios';
 import { Context } from '../../context/Context';
@@ -10,7 +10,7 @@ export default function SinglePost() {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
   const [post, setPost] = useState([]);
-  const PF = process.env.REACT_APP_BACKEND_URL + 'images/';
+  const PF = process.env.REACT_APP_BACKEND_URL + '/images/';
   const { user } = useContext(Context);
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
@@ -18,7 +18,9 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async () => {
-      const res = await axios.get('/posts/' + path);
+      const res = await axios.get(
+        process.env.REACT_APP_ASSET_URL + '/posts/' + path
+      );
       setPost(res.data);
       setTitle(res.data.title);
       setDesc(res.data.description);
@@ -28,16 +30,19 @@ export default function SinglePost() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`/posts/${post._id}`, {
-        data: { username: user.username },
-      });
+      await axios.delete(
+        `${process.env.REACT_APP_ASSET_URL}/posts/${post._id}`,
+        {
+          data: { username: user.username },
+        }
+      );
       window.location.replace('/');
     } catch (err) {}
   };
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`/posts/${post._id}`, {
+      await axios.put(`${process.env.REACT_APP_ASSET_URL}/posts/${post._id}`, {
         username: user.username,
         title,
         description: desc,

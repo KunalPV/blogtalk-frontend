@@ -55,4 +55,5 @@
 .login-submit:disabled {
   cursor: not-allowed;
   background-color: hsl(0, 0%, 95%);
+  color: gray;
 }
